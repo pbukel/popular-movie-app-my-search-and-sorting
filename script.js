@@ -26,6 +26,7 @@ fetch(APIURL)
 function movieSearch(arr) {
   search.addEventListener("keypress", function (e) {
     if (e.key === "Enter") {
+      e.preventDefault();
       let newarr = arr.filter((x) => {
         return x.original_title
           .toLowerCase()
